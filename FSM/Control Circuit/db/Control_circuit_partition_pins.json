@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "R3in",
+					"strict" : false
+				},
+				{
+					"name" : "R2out",
+					"strict" : false
+				},
+				{
+					"name" : "R1out",
+					"strict" : false
+				},
+				{
+					"name" : "R2in",
+					"strict" : false
+				},
+				{
+					"name" : "Done",
+					"strict" : false
+				},
+				{
+					"name" : "R3out",
+					"strict" : false
+				},
+				{
+					"name" : "R1in",
+					"strict" : false
+				},
+				{
+					"name" : "w",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,536 @@
+Analysis & Synthesis report for Checker
+Tue May 03 17:54:22 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: BUSMUX:inst36
+ 13. Parameter Settings for User Entity Instance: BUSMUX:inst37
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 03 17:54:22 2022           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
+; Revision Name                      ; Checker                                         ;
+; Top-level Entity Name              ; regFile                                         ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 440                                             ;
+;     Total combinational functions  ; 320                                             ;
+;     Dedicated logic registers      ; 128                                             ;
+; Total registers                    ; 128                                             ;
+; Total pins                         ; 55                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; regFile            ; Checker            ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------+---------+
+; regFile.bdf                      ; yes             ; User Block Diagram/Schematic File        ; U:/CPR E 281/Final Project/Validation Checking/regFile.bdf            ;         ;
+; seven_seg_decoder.v              ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/seven_seg_decoder.v    ;         ;
+; mux81_8b.v                       ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/mux81_8b.v             ;         ;
+; dff_8b.v                         ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/dff_8b.v               ;         ;
+; reg_8b.v                         ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/reg_8b.v               ;         ;
+; register.v                       ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/register.v             ;         ;
+; mux21.v                          ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/mux21.v                ;         ;
+; decoder3to8.v                    ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/decoder3to8.v          ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/busmux.tdf          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_mux.inc         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_mux.tdf         ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/muxlut.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mux_erc.tdf                   ; yes             ; Auto-Generated Megafunction              ; U:/CPR E 281/Final Project/Validation Checking/db/mux_erc.tdf         ;         ;
+; comparison_circuit.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPR E 281/Final Project/Validation Checking/comparison_circuit.bdf ;         ;
+; comparator_8b.v                  ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/comparator_8b.v        ;         ;
+; validation.v                     ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Validation Checking/validation.v           ;         ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 440          ;
+;                                             ;              ;
+; Total combinational functions               ; 320          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 170          ;
+;     -- 3 input functions                    ; 126          ;
+;     -- <=2 input functions                  ; 24           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 222          ;
+;     -- arithmetic mode                      ; 98           ;
+;                                             ;              ;
+; Total registers                             ; 128          ;
+;     -- Dedicated logic registers            ; 128          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 55           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; COMMIT~input ;
+; Maximum fan-out                             ; 64           ;
+; Total fan-out                               ; 1517         ;
+; Average fan-out                             ; 2.72         ;
++---------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name        ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
+; |regFile                          ; 320 (0)             ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |regFile                                                     ; regFile            ; work         ;
+;    |Comparison_circuit:inst11|    ; 156 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11                           ; Comparison_circuit ; work         ;
+;       |Comparator_8b:inst2|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst2       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst3|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst3       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst4|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst4       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst5|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst5       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst6|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst6       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst7|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst7       ; Comparator_8b      ; work         ;
+;       |Comparator_8b:inst|        ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|Comparator_8b:inst        ; Comparator_8b      ; work         ;
+;       |validation:inst22|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|Comparison_circuit:inst11|validation:inst22         ; validation         ; work         ;
+;    |MUX21:inst31|                 ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst31                                        ; MUX21              ; work         ;
+;    |MUX21:inst39|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst39                                        ; MUX21              ; work         ;
+;    |MUX21:inst40|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst40                                        ; MUX21              ; work         ;
+;    |MUX21:inst41|                 ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst41                                        ; MUX21              ; work         ;
+;    |MUX21:inst42|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst42                                        ; MUX21              ; work         ;
+;    |MUX21:inst44|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst44                                        ; MUX21              ; work         ;
+;    |MUX21:inst45|                 ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst45                                        ; MUX21              ; work         ;
+;    |MUX21:inst46|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst46                                        ; MUX21              ; work         ;
+;    |MUX21:inst47|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|MUX21:inst47                                        ; MUX21              ; work         ;
+;    |busmux:inst36|                ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|busmux:inst36                                       ; busmux             ; work         ;
+;       |lpm_mux:$00000|            ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|busmux:inst36|lpm_mux:$00000                        ; lpm_mux            ; work         ;
+;          |mux_erc:auto_generated| ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|busmux:inst36|lpm_mux:$00000|mux_erc:auto_generated ; mux_erc            ; work         ;
+;    |dff_8b:inst10|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst10                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst13|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst13                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst14|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst14                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst15|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst15                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst16|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst16                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst17|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst17                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst28|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst28                                       ; dff_8b             ; work         ;
+;    |dff_8b:inst29|                ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|dff_8b:inst29                                       ; dff_8b             ; work         ;
+;    |mux81_8b:inst20|              ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|mux81_8b:inst20                                     ; mux81_8b           ; work         ;
+;    |mux81_8b:inst9|               ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|mux81_8b:inst9                                      ; mux81_8b           ; work         ;
+;    |reg_8b:inst1|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst1|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst2|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst2|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst3|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst3|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst4|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst4|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst5|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst5|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst6|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst6|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst7|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7                                        ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst1                     ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst2                     ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst3                     ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst4                     ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst5                     ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst6                     ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst7                     ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst7|Register:b2v_inst                      ; Register           ; work         ;
+;    |reg_8b:inst|                  ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst                                         ; reg_8b             ; work         ;
+;       |Register:b2v_inst1|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst1                      ; Register           ; work         ;
+;       |Register:b2v_inst2|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst2                      ; Register           ; work         ;
+;       |Register:b2v_inst3|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst3                      ; Register           ; work         ;
+;       |Register:b2v_inst4|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst4                      ; Register           ; work         ;
+;       |Register:b2v_inst5|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst5                      ; Register           ; work         ;
+;       |Register:b2v_inst6|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst6                      ; Register           ; work         ;
+;       |Register:b2v_inst7|        ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst7                      ; Register           ; work         ;
+;       |Register:b2v_inst|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg_8b:inst|Register:b2v_inst                       ; Register           ; work         ;
+;    |seven_seg_decoder:inst12|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|seven_seg_decoder:inst12                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst18|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|seven_seg_decoder:inst18                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst19|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|seven_seg_decoder:inst19                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst21|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|seven_seg_decoder:inst21                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst22|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|seven_seg_decoder:inst22                            ; seven_seg_decoder  ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; Comparison_circuit:inst11|validation:inst22|out[1] ; Validate            ; yes                    ;
+; Comparison_circuit:inst11|validation:inst22|out[2] ; Validate            ; yes                    ;
+; Comparison_circuit:inst11|validation:inst22|out[0] ; Validate            ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; MUX21:inst31|Y~0                                       ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 128   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |regFile|busmux:inst36|lpm_mux:$00000|mux_erc:auto_generated|result_node[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |regFile|MUX21:inst40|Y                                                     ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |regFile|mux81_8b:inst9|F[7]                                                ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |regFile|mux81_8b:inst20|F[7]                                               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |regFile|Comparison_circuit:inst11|validation:inst22|out                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst36 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 8     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst37 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 8     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 55                          ;
+; cycloneiii_ff         ; 128                         ;
+;     ENA               ; 64                          ;
+;     plain             ; 64                          ;
+; cycloneiii_lcell_comb ; 324                         ;
+;     arith             ; 98                          ;
+;         3 data inputs ; 98                          ;
+;     normal            ; 226                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 170                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+    Info: Processing started: Tue May 03 17:54:12 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Checker -c Checker
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.bdf
+    Info (12023): Found entity 1: regFile
+Info (12021): Found 1 design units, including 1 entities, in source file checker.bdf
+    Info (12023): Found entity 1: Checker
+Info (12127): Elaborating entity "regFile" for the top level hierarchy
+Warning (12125): Using design file seven_seg_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seven_seg_decoder File: U:/CPR E 281/Final Project/Validation Checking/seven_seg_decoder.v Line: 1
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:inst18"
+Warning (12125): Using design file mux81_8b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux81_8b File: U:/CPR E 281/Final Project/Validation Checking/mux81_8b.v Line: 1
+Info (12128): Elaborating entity "mux81_8b" for hierarchy "mux81_8b:inst9"
+Warning (12125): Using design file dff_8b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: dff_8b File: U:/CPR E 281/Final Project/Validation Checking/dff_8b.v Line: 1
+Warning (12300): Found the following files while searching for definition of entity "dff_8b", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: dff_8b.bdf
+Info (12128): Elaborating entity "dff_8b" for hierarchy "dff_8b:inst10"
+Warning (12125): Using design file reg_8b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: reg_8b File: U:/CPR E 281/Final Project/Validation Checking/reg_8b.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "reg_8b", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: reg_8b.bdf
+Info (12128): Elaborating entity "reg_8b" for hierarchy "reg_8b:inst"
+Warning (12125): Using design file register.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Register File: U:/CPR E 281/Final Project/Validation Checking/register.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "Register", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: Register.bdf
+Info (12128): Elaborating entity "Register" for hierarchy "reg_8b:inst|Register:b2v_inst" File: U:/CPR E 281/Final Project/Validation Checking/reg_8b.v Line: 43
+Warning (12125): Using design file mux21.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX21 File: U:/CPR E 281/Final Project/Validation Checking/mux21.v Line: 1
+Info (12128): Elaborating entity "MUX21" for hierarchy "reg_8b:inst|Register:b2v_inst|MUX21:b2v_inst1" File: U:/CPR E 281/Final Project/Validation Checking/register.v Line: 45
+Warning (12125): Using design file decoder3to8.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: decoder3to8 File: U:/CPR E 281/Final Project/Validation Checking/decoder3to8.v Line: 1
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "decoder3to8:inst8"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst36"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst36"
+Info (12133): Instantiated megafunction "BUSMUX:inst36" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst36|lpm_mux:$00000" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst36|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst36" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_erc.tdf
+    Info (12023): Found entity 1: mux_erc File: U:/CPR E 281/Final Project/Validation Checking/db/mux_erc.tdf Line: 23
+Info (12128): Elaborating entity "mux_erc" for hierarchy "BUSMUX:inst36|lpm_mux:$00000|mux_erc:auto_generated" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Warning (12125): Using design file comparison_circuit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Comparison_circuit
+Info (12128): Elaborating entity "Comparison_circuit" for hierarchy "Comparison_circuit:inst11"
+Warning (12125): Using design file comparator_8b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Comparator_8b File: U:/CPR E 281/Final Project/Validation Checking/comparator_8b.v Line: 1
+Info (12128): Elaborating entity "Comparator_8b" for hierarchy "Comparison_circuit:inst11|Comparator_8b:inst"
+Warning (12125): Using design file validation.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: validation File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 1
+Info (12128): Elaborating entity "validation" for hierarchy "Comparison_circuit:inst11|validation:inst22"
+Warning (10235): Verilog HDL Always Construct warning at validation.v(9): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at validation.v(12): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 12
+Warning (10235): Verilog HDL Always Construct warning at validation.v(15): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 15
+Warning (10235): Verilog HDL Always Construct warning at validation.v(18): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at validation.v(21): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at validation.v(24): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at validation.v(27): variable "Gt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at validation.v(6): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 6
+Info (10041): Inferred latch for "out[0]" at validation.v(7) File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 7
+Info (10041): Inferred latch for "out[1]" at validation.v(7) File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 7
+Info (10041): Inferred latch for "out[2]" at validation.v(7) File: U:/CPR E 281/Final Project/Validation Checking/validation.v Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 503 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 448 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Tue May 03 17:54:22 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:15
+
+

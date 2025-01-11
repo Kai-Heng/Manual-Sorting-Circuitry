@@ -1,0 +1,59 @@
+{U:/CPR E 281/Final Project/Register File/regFile/MUX21.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/MUX21.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MUX21
+
+Top level modules:
+	MUX21
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/Register.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/Register.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/dff_8b.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/dff_8b.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module dff_8b
+
+Top level modules:
+	dff_8b
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/regFile.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/regFile.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module regFile
+-- Compiling module busmux_0
+-- Compiling module busmux_1
+
+Top level modules:
+	regFile
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/reg_8b.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/reg_8b.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module reg_8b
+
+Top level modules:
+	reg_8b
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module decoder3to8
+
+Top level modules:
+	decoder3to8
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module mux81_8b
+
+Top level modules:
+	mux81_8b
+
+} {} {}} {U:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module seven_seg_decoder
+
+Top level modules:
+	seven_seg_decoder
+
+} {} {}}

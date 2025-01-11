@@ -1,0 +1,247 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dU:/CPR E 281/Final Project/Register File/MUX81
+T_opt
+!s110 1651520865
+V5zTG9CbSGZR33Ei_Nh6Z53
+04 7 4 work regFile fast 0
+=1-b07b252ca78e-62703560-273-2620
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vbusmux_0
+Z2 !s110 1651520849
+!i10b 1
+!s100 3_9[g9BL:OKd=f<eAZb[d1
+I7VZFV=o;RB6IgM_K^`Ro<3
+Z3 dU:/CPR E 281/Final Project/Register File/regFile
+Z4 w1651520513
+Z5 8U:/CPR E 281/Final Project/Register File/regFile/regFile.v
+Z6 FU:/CPR E 281/Final Project/Register File/regFile/regFile.v
+!i122 46
+L0 456 9
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z9 !s108 1651520849.000000
+Z10 !s107 U:/CPR E 281/Final Project/Register File/regFile/regFile.v|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/regFile.v|
+!i113 0
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vbusmux_1
+R2
+!i10b 1
+!s100 jBoZ]<z7I`Wm4@=l^=iAN2
+IT40gbQinUajiogKKKXLYN2
+R3
+R4
+R5
+R6
+!i122 46
+L0 466 9
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R1
+vdecoder3to8
+Z13 !s110 1651520848
+!i10b 1
+!s100 GQh<V`nTa1hXl^[i8Nj;c3
+Ig55=TU_79fNCW<C85EVLU1
+R3
+w1650996974
+8U:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v
+FU:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v
+!i122 43
+L0 1 67
+R7
+R8
+r1
+!s85 0
+31
+!s108 1651520847.000000
+!s107 U:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/decoder3to8.v|
+!i113 0
+R12
+R1
+vdff_8b
+Z14 !s110 1651520851
+!i10b 1
+!s100 <LD_L<fgV;aF^bmGmOR;11
+ITP`CH]LUl[:e8UKLE<k2`2
+R3
+w1651519225
+8U:/CPR E 281/Final Project/Register File/regFile/dff_8b.v
+FU:/CPR E 281/Final Project/Register File/regFile/dff_8b.v
+!i122 49
+L0 1 12
+R7
+R8
+r1
+!s85 0
+31
+Z15 !s108 1651520850.000000
+!s107 U:/CPR E 281/Final Project/Register File/regFile/dff_8b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/dff_8b.v|
+!i113 0
+R12
+R1
+vMUX21
+R13
+!i10b 1
+!s100 Rj_H3c@ig]SA2O4ezW<UZ3
+IoX0^i3aWko7W>o`MaDFOe0
+R3
+w1650997067
+8U:/CPR E 281/Final Project/Register File/regFile/MUX21.v
+FU:/CPR E 281/Final Project/Register File/regFile/MUX21.v
+!i122 44
+L0 1 7
+R7
+R8
+r1
+!s85 0
+31
+Z16 !s108 1651520848.000000
+!s107 U:/CPR E 281/Final Project/Register File/regFile/MUX21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/MUX21.v|
+!i113 0
+R12
+R1
+n@m@u@x21
+vmux81_8b
+R2
+!i10b 1
+!s100 73O<M1RkQV1g:oXlJ1D@i3
+ITRPZLAfh;^ck<<cI=cz4R1
+R3
+w1651110685
+8U:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v
+FU:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v
+!i122 45
+L0 1 8
+R7
+R8
+r1
+!s85 0
+31
+R16
+!s107 U:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/mux81_8b.v|
+!i113 0
+R12
+R1
+vreg_8b
+Z17 !s110 1651520850
+!i10b 1
+!s100 c<:8a[07`lmd66nGh[;RZ1
+IAKM>:Th3DXcJThhKBA:Yg2
+R3
+w1651520540
+8U:/CPR E 281/Final Project/Register File/regFile/reg_8b.v
+FU:/CPR E 281/Final Project/Register File/regFile/reg_8b.v
+!i122 47
+L0 20 77
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 U:/CPR E 281/Final Project/Register File/regFile/reg_8b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/reg_8b.v|
+!i113 0
+R12
+R1
+vregFile
+R2
+!i10b 1
+!s100 26S]2MOQ]>AWh1lo<Bj^]2
+I_gBn[:SV61iPogjS>iCRY2
+R3
+R4
+R5
+R6
+!i122 46
+L0 20 435
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R1
+nreg@file
+vRegister
+R17
+!i10b 1
+!s100 DmTYSMHlO@7oJo[<n=@jX3
+IX:igV;g_d=HoPBNmNeI@?1
+R3
+w1651520552
+8U:/CPR E 281/Final Project/Register File/regFile/Register.v
+FU:/CPR E 281/Final Project/Register File/regFile/Register.v
+!i122 48
+L0 20 37
+R7
+R8
+r1
+!s85 0
+31
+R15
+!s107 U:/CPR E 281/Final Project/Register File/regFile/Register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/Register.v|
+!i113 0
+R12
+R1
+n@register
+vseven_seg_decoder
+R14
+!i10b 1
+!s100 nQEHk^S[kC]CXS<[MD>hD3
+Ih=[Q0_Z=7cDQ^WIP?nbAD3
+R3
+w1645496211
+8U:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v
+FU:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v
+!i122 50
+L0 1 27
+R7
+R8
+r1
+!s85 0
+31
+!s108 1651520851.000000
+!s107 U:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/regFile/seven_seg_decoder.v|
+!i113 0
+R12
+R1

@@ -1,0 +1,612 @@
+Analysis & Synthesis report for File
+Wed Apr 27 17:15:20 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr 27 17:15:20 2022           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
+; Revision Name                      ; File                                            ;
+; Top-level Entity Name              ; File                                            ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 182                                             ;
+;     Total combinational functions  ; 182                                             ;
+;     Dedicated logic registers      ; 64                                              ;
+; Total registers                    ; 64                                              ;
+; Total pins                         ; 25                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; File               ; File               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; File.bdf                         ; yes             ; User Block Diagram/Schematic File        ; U:/CPR E 281/Final Project/Register File/File/File.bdf      ;         ;
+; mux81.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPR E 281/Final Project/Register File/File/mux81.bdf     ;         ;
+; register.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPR E 281/Final Project/Register File/File/register.bdf  ;         ;
+; mux21.v                          ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Register File/File/mux21.v       ;         ;
+; decoder3to8.v                    ; yes             ; Auto-Found Verilog HDL File              ; U:/CPR E 281/Final Project/Register File/File/decoder3to8.v ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 182          ;
+;                                             ;              ;
+; Total combinational functions               ; 182          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 40           ;
+;     -- 3 input functions                    ; 138          ;
+;     -- <=2 input functions                  ; 4            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 182          ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 64           ;
+;     -- Dedicated logic registers            ; 64           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 25           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; COMMIT~input ;
+; Maximum fan-out                             ; 66           ;
+; Total fan-out                               ; 743          ;
+; Average fan-out                             ; 2.51         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; |File                      ; 182 (0)             ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |File                             ; File        ; work         ;
+;    |MUX81:inst67|          ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst67                ; MUX81       ; work         ;
+;    |MUX81:inst68|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst68                ; MUX81       ; work         ;
+;    |MUX81:inst69|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst69                ; MUX81       ; work         ;
+;    |MUX81:inst70|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst70                ; MUX81       ; work         ;
+;    |MUX81:inst71|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst71                ; MUX81       ; work         ;
+;    |MUX81:inst72|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst72                ; MUX81       ; work         ;
+;    |MUX81:inst73|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst73                ; MUX81       ; work         ;
+;    |MUX81:inst74|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|MUX81:inst74                ; MUX81       ; work         ;
+;    |Register:inst10|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst10             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst10|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst10|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst11|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst11             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst11|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst11|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst12|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst12             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst12|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst12|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst13|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst13             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst13|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst13|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst14|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst14             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst14|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst14|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst15|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst15             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst15|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst15|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst16|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst16             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst16|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst16|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst17|       ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst17             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst17|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst17|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst18|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst18             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst18|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst18|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst19|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst19             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst19|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst19|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst20|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst20             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst20|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst20|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst21|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst21             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst21|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst21|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst22|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst22             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst22|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst22|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst23|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst23             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst23|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst23|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst24|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst24             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst24|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst24|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst25|       ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst25             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst25|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst25|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst26|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst26             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst26|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst26|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst27|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst27             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst27|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst27|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst28|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst28             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst28|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst28|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst29|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst29             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst29|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst29|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst2|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst2              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst2|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst2|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst30|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst30             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst30|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst30|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst31|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst31             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst31|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst31|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst32|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst32             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst32|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst32|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst33|       ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst33             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst33|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst33|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst34|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst34             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst34|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst34|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst35|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst35             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst35|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst35|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst36|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst36             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst36|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst36|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst37|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst37             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst37|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst37|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst38|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst38             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst38|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst38|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst39|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst39             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst39|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst39|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst3|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst3              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst3|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst3|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst40|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst40             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst40|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst40|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst41|       ; 4 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst41             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst41|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst41|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst42|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst42             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst42|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst42|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst43|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst43             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst43|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst43|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst44|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst44             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst44|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst44|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst45|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst45             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst45|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst45|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst46|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst46             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst46|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst46|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst47|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst47             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst47|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst47|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst48|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst48             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst48|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst48|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst49|       ; 4 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst49             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst49|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst49|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst4|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst4              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst4|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst4|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst50|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst50             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst50|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst50|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst51|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst51             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst51|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst51|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst52|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst52             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst52|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst52|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst53|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst53             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst53|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst53|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst54|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst54             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst54|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst54|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst55|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst55             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst55|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst55|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst56|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst56             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst56|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst56|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst57|       ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst57             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst57|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst57|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst58|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst58             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst58|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst58|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst59|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst59             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst59|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst59|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst5|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst5              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst5|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst5|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst60|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst60             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst60|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst60|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst61|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst61             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst61|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst61|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst62|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst62             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst62|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst62|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst63|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst63             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst63|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst63|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst64|       ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst64             ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst64|MUX21:inst1 ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst64|MUX21:inst  ; MUX21       ; work         ;
+;    |Register:inst6|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst6              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst6|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst6|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst7|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst7              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst7|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst7|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst8|        ; 2 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst8              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst8|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst8|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst9|        ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst9              ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst9|MUX21:inst1  ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst9|MUX21:inst   ; MUX21       ; work         ;
+;    |Register:inst|         ; 3 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst               ; Register    ; work         ;
+;       |MUX21:inst1|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst|MUX21:inst1   ; MUX21       ; work         ;
+;       |MUX21:inst|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |File|Register:inst|MUX21:inst    ; MUX21       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                 ;
++--------------------------------------------------------+-----+
+; Logic Cell Name                                        ;     ;
++--------------------------------------------------------+-----+
+; Register:inst|MUX21:inst1|Y~0                          ;     ;
+; Register:inst17|MUX21:inst1|Y~0                        ;     ;
+; Register:inst9|MUX21:inst1|Y~0                         ;     ;
+; Register:inst25|MUX21:inst1|Y~0                        ;     ;
+; Register:inst41|MUX21:inst1|Y~0                        ;     ;
+; Register:inst33|MUX21:inst1|Y~0                        ;     ;
+; Register:inst49|MUX21:inst1|Y~0                        ;     ;
+; Register:inst57|MUX21:inst1|Y~0                        ;     ;
+; Register:inst2|MUX21:inst1|Y~0                         ;     ;
+; Register:inst18|MUX21:inst1|Y~0                        ;     ;
+; Register:inst10|MUX21:inst1|Y~0                        ;     ;
+; Register:inst26|MUX21:inst1|Y~0                        ;     ;
+; Register:inst42|MUX21:inst1|Y~0                        ;     ;
+; Register:inst34|MUX21:inst1|Y~0                        ;     ;
+; Register:inst50|MUX21:inst1|Y~0                        ;     ;
+; Register:inst58|MUX21:inst1|Y~0                        ;     ;
+; Register:inst3|MUX21:inst1|Y~0                         ;     ;
+; Register:inst19|MUX21:inst1|Y~0                        ;     ;
+; Register:inst11|MUX21:inst1|Y~0                        ;     ;
+; Register:inst27|MUX21:inst1|Y~0                        ;     ;
+; Register:inst43|MUX21:inst1|Y~0                        ;     ;
+; Register:inst35|MUX21:inst1|Y~0                        ;     ;
+; Register:inst51|MUX21:inst1|Y~0                        ;     ;
+; Register:inst59|MUX21:inst1|Y~0                        ;     ;
+; Register:inst4|MUX21:inst1|Y~0                         ;     ;
+; Register:inst20|MUX21:inst1|Y~0                        ;     ;
+; Register:inst12|MUX21:inst1|Y~0                        ;     ;
+; Register:inst28|MUX21:inst1|Y~0                        ;     ;
+; Register:inst44|MUX21:inst1|Y~0                        ;     ;
+; Register:inst36|MUX21:inst1|Y~0                        ;     ;
+; Register:inst52|MUX21:inst1|Y~0                        ;     ;
+; Register:inst60|MUX21:inst1|Y~0                        ;     ;
+; Register:inst5|MUX21:inst1|Y~0                         ;     ;
+; Register:inst21|MUX21:inst1|Y~0                        ;     ;
+; Register:inst13|MUX21:inst1|Y~0                        ;     ;
+; Register:inst29|MUX21:inst1|Y~0                        ;     ;
+; Register:inst45|MUX21:inst1|Y~0                        ;     ;
+; Register:inst37|MUX21:inst1|Y~0                        ;     ;
+; Register:inst53|MUX21:inst1|Y~0                        ;     ;
+; Register:inst61|MUX21:inst1|Y~0                        ;     ;
+; Register:inst6|MUX21:inst1|Y~0                         ;     ;
+; Register:inst22|MUX21:inst1|Y~0                        ;     ;
+; Register:inst14|MUX21:inst1|Y~0                        ;     ;
+; Register:inst30|MUX21:inst1|Y~0                        ;     ;
+; Register:inst46|MUX21:inst1|Y~0                        ;     ;
+; Register:inst38|MUX21:inst1|Y~0                        ;     ;
+; Register:inst54|MUX21:inst1|Y~0                        ;     ;
+; Register:inst62|MUX21:inst1|Y~0                        ;     ;
+; Register:inst7|MUX21:inst1|Y~0                         ;     ;
+; Register:inst23|MUX21:inst1|Y~0                        ;     ;
+; Register:inst15|MUX21:inst1|Y~0                        ;     ;
+; Register:inst31|MUX21:inst1|Y~0                        ;     ;
+; Register:inst47|MUX21:inst1|Y~0                        ;     ;
+; Register:inst39|MUX21:inst1|Y~0                        ;     ;
+; Register:inst55|MUX21:inst1|Y~0                        ;     ;
+; Register:inst63|MUX21:inst1|Y~0                        ;     ;
+; Register:inst8|MUX21:inst1|Y~0                         ;     ;
+; Register:inst24|MUX21:inst1|Y~0                        ;     ;
+; Register:inst16|MUX21:inst1|Y~0                        ;     ;
+; Register:inst32|MUX21:inst1|Y~0                        ;     ;
+; Register:inst48|MUX21:inst1|Y~0                        ;     ;
+; Register:inst40|MUX21:inst1|Y~0                        ;     ;
+; Register:inst56|MUX21:inst1|Y~0                        ;     ;
+; Register:inst64|MUX21:inst1|Y~0                        ;     ;
+; Register:inst|MUX21:inst|Y~0                           ;     ;
+; Register:inst17|MUX21:inst|Y~0                         ;     ;
+; Register:inst9|MUX21:inst|Y~0                          ;     ;
+; Register:inst25|MUX21:inst|Y~0                         ;     ;
+; Register:inst41|MUX21:inst|Y~0                         ;     ;
+; Register:inst33|MUX21:inst|Y~0                         ;     ;
+; Register:inst49|MUX21:inst|Y~0                         ;     ;
+; Register:inst57|MUX21:inst|Y~0                         ;     ;
+; Register:inst2|MUX21:inst|Y~0                          ;     ;
+; Register:inst18|MUX21:inst|Y~0                         ;     ;
+; Register:inst10|MUX21:inst|Y~0                         ;     ;
+; Register:inst26|MUX21:inst|Y~0                         ;     ;
+; Register:inst42|MUX21:inst|Y~0                         ;     ;
+; Register:inst34|MUX21:inst|Y~0                         ;     ;
+; Register:inst50|MUX21:inst|Y~0                         ;     ;
+; Register:inst58|MUX21:inst|Y~0                         ;     ;
+; Register:inst3|MUX21:inst|Y~0                          ;     ;
+; Register:inst19|MUX21:inst|Y~0                         ;     ;
+; Register:inst11|MUX21:inst|Y~0                         ;     ;
+; Register:inst27|MUX21:inst|Y~0                         ;     ;
+; Register:inst43|MUX21:inst|Y~0                         ;     ;
+; Register:inst35|MUX21:inst|Y~0                         ;     ;
+; Register:inst51|MUX21:inst|Y~0                         ;     ;
+; Register:inst59|MUX21:inst|Y~0                         ;     ;
+; Register:inst4|MUX21:inst|Y~0                          ;     ;
+; Register:inst20|MUX21:inst|Y~0                         ;     ;
+; Register:inst12|MUX21:inst|Y~0                         ;     ;
+; Register:inst28|MUX21:inst|Y~0                         ;     ;
+; Register:inst44|MUX21:inst|Y~0                         ;     ;
+; Register:inst36|MUX21:inst|Y~0                         ;     ;
+; Register:inst52|MUX21:inst|Y~0                         ;     ;
+; Register:inst60|MUX21:inst|Y~0                         ;     ;
+; Register:inst5|MUX21:inst|Y~0                          ;     ;
+; Register:inst21|MUX21:inst|Y~0                         ;     ;
+; Register:inst13|MUX21:inst|Y~0                         ;     ;
+; Register:inst29|MUX21:inst|Y~0                         ;     ;
+; Number of logic cells representing combinational loops ; 128 ;
++--------------------------------------------------------+-----+
+Table restricted to first 100 entries. Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 64                          ;
+;     plain             ; 64                          ;
+; cycloneiii_lcell_comb ; 182                         ;
+;     normal            ; 182                         ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 138                         ;
+;         4 data inputs ; 40                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+    Info: Processing started: Wed Apr 27 17:15:11 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off File -c File
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file file.bdf
+    Info (12023): Found entity 1: File
+Info (12127): Elaborating entity "File" for the top level hierarchy
+Warning (12125): Using design file mux81.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX81
+Info (12128): Elaborating entity "MUX81" for hierarchy "MUX81:inst67"
+Warning (12125): Using design file register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Register
+Info (12128): Elaborating entity "Register" for hierarchy "Register:inst"
+Warning (12125): Using design file mux21.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX21 File: U:/CPR E 281/Final Project/Register File/File/mux21.v Line: 1
+Info (12128): Elaborating entity "MUX21" for hierarchy "Register:inst|MUX21:inst1"
+Warning (12125): Using design file decoder3to8.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: decoder3to8 File: U:/CPR E 281/Final Project/Register File/File/decoder3to8.v Line: 1
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "decoder3to8:inst65"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 271 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 246 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Wed Apr 27 17:15:20 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
+
+

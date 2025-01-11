@@ -1,0 +1,29 @@
+|Machine
+A <= seven_seg_decoder:inst11.A
+Clock => inst.CLK
+Clock => inst1.CLK
+W => inst5.IN0
+W => inst7.IN0
+W => inst8.IN0
+B <= seven_seg_decoder:inst11.B
+C <= seven_seg_decoder:inst11.C
+D <= seven_seg_decoder:inst11.D
+E <= seven_seg_decoder:inst11.E
+F <= seven_seg_decoder:inst11.F
+G <= seven_seg_decoder:inst11.G
+
+
+|Machine|seven_seg_decoder:inst11
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,16 @@
+|Control_circuit
+R3in <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst2.CLK
+Clock => inst3.CLK
+Clock => inst.CLK
+Clock => inst1.CLK
+w => inst4.IN0
+w => inst7.IN0
+R2out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+R1out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+R2in <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Done <= inst.DB_MAX_OUTPUT_PORT_TYPE
+R3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+R1in <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

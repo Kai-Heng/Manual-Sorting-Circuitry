@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "AA",
+					"strict" : false
+				},
+				{
+					"name" : "AB",
+					"strict" : false
+				},
+				{
+					"name" : "AC",
+					"strict" : false
+				},
+				{
+					"name" : "AD",
+					"strict" : false
+				},
+				{
+					"name" : "AE",
+					"strict" : false
+				},
+				{
+					"name" : "AF",
+					"strict" : false
+				},
+				{
+					"name" : "AG",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

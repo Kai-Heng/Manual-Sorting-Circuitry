@@ -1,0 +1,103 @@
+|MUX81
+A <= seven_seg_decoder:inst4.A
+S2 => Mux8_4b:inst.S2
+S1 => Mux8_4b:inst.S1
+S0 => Mux8_4b:inst.S0
+W0[0] => Mux8_4b:inst.W0[0]
+W0[1] => Mux8_4b:inst.W0[1]
+W0[2] => Mux8_4b:inst.W0[2]
+W1[0] => Mux8_4b:inst.W1[0]
+W1[1] => Mux8_4b:inst.W1[1]
+W1[2] => Mux8_4b:inst.W1[2]
+W2[0] => Mux8_4b:inst.W2[0]
+W2[1] => Mux8_4b:inst.W2[1]
+W2[2] => Mux8_4b:inst.W2[2]
+W3[0] => Mux8_4b:inst.W3[0]
+W3[1] => Mux8_4b:inst.W3[1]
+W3[2] => Mux8_4b:inst.W3[2]
+W4[0] => Mux8_4b:inst.W4[0]
+W4[1] => Mux8_4b:inst.W4[1]
+W4[2] => Mux8_4b:inst.W4[2]
+W5[0] => Mux8_4b:inst.W5[0]
+W5[1] => Mux8_4b:inst.W5[1]
+W5[2] => Mux8_4b:inst.W5[2]
+W6[0] => Mux8_4b:inst.W6[0]
+W6[1] => Mux8_4b:inst.W6[1]
+W6[2] => Mux8_4b:inst.W6[2]
+W7[0] => Mux8_4b:inst.W7[0]
+W7[1] => Mux8_4b:inst.W7[1]
+W7[2] => Mux8_4b:inst.W7[2]
+B <= seven_seg_decoder:inst4.B
+C <= seven_seg_decoder:inst4.C
+D <= seven_seg_decoder:inst4.D
+E <= seven_seg_decoder:inst4.E
+F <= seven_seg_decoder:inst4.F
+G <= seven_seg_decoder:inst4.G
+
+
+|MUX81|seven_seg_decoder:inst4
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MUX81|Mux8_4b:inst
+S2 => F.OUTPUTSELECT
+S2 => F.OUTPUTSELECT
+S2 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S1 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+S0 => F.OUTPUTSELECT
+W0[0] => F.DATAA
+W0[1] => F.DATAA
+W0[2] => F.DATAA
+W1[0] => F.DATAB
+W1[1] => F.DATAB
+W1[2] => F.DATAB
+W2[0] => F.DATAA
+W2[1] => F.DATAA
+W2[2] => F.DATAA
+W3[0] => F.DATAB
+W3[1] => F.DATAB
+W3[2] => F.DATAB
+W4[0] => F.DATAA
+W4[1] => F.DATAA
+W4[2] => F.DATAA
+W5[0] => F.DATAB
+W5[1] => F.DATAB
+W5[2] => F.DATAB
+W6[0] => F.DATAA
+W6[1] => F.DATAA
+W6[2] => F.DATAA
+W7[0] => F.DATAB
+W7[1] => F.DATAB
+W7[2] => F.DATAB
+F[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= <GND>
+
+

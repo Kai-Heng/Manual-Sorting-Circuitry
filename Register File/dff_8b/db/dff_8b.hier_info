@@ -1,0 +1,27 @@
+|dff_8b
+Q[0] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst7.CLK
+CLK => inst6.CLK
+CLK => inst5.CLK
+CLK => inst4.CLK
+CLK => inst3.CLK
+CLK => inst2.CLK
+CLK => inst1.CLK
+CLK => inst.CLK
+D[0] => inst7.DATAIN
+D[1] => inst6.DATAIN
+D[2] => inst5.DATAIN
+D[3] => inst4.DATAIN
+D[4] => inst3.DATAIN
+D[5] => inst2.DATAIN
+D[6] => inst1.DATAIN
+D[7] => inst.DATAIN
+
+

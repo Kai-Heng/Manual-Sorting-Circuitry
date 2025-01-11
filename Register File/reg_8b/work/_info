@@ -1,0 +1,90 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.2/examples
+T_opt
+!s110 1651098187
+VMVE^m`eDS<4DQdXEOe2]83
+04 6 4 work reg_8b fast 0
+=1-b07b252ce63e-6269c24a-d3-1618
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vMUX21
+Z1 !s110 1651098156
+!i10b 1
+!s100 Rj_H3c@ig]SA2O4ezW<UZ3
+I^:[UK310WX[lP3faR4R9j3
+Z2 dU:/CPR E 281/Final Project/Register File/reg_8b
+w1650997067
+8U:/CPR E 281/Final Project/Register File/reg_8b/MUX21.v
+FU:/CPR E 281/Final Project/Register File/reg_8b/MUX21.v
+!i122 3
+L0 1 7
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z5 !s108 1651098156.000000
+!s107 U:/CPR E 281/Final Project/Register File/reg_8b/MUX21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/reg_8b/MUX21.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@m@u@x21
+vreg_8b
+R1
+!i10b 1
+!s100 bK=kg6Ei75G]f6:?ZIU8C3
+I^KgiG0KXL:n^1RX<>R;:Q0
+R2
+w1651097773
+8U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v
+FU:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v
+!i122 2
+L0 20 87
+R3
+R4
+r1
+!s85 0
+31
+!s108 1651098155.000000
+!s107 U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v|
+!i113 0
+R6
+R0
+vRegister
+!s110 1651098157
+!i10b 1
+!s100 eM9PCQ5mhL<19m<9@m?`:3
+I44m;WZSV0o6gOC>6LCYg91
+R2
+w1651097997
+8U:/CPR E 281/Final Project/Register File/reg_8b/Register.v
+FU:/CPR E 281/Final Project/Register File/reg_8b/Register.v
+!i122 4
+L0 20 45
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 U:/CPR E 281/Final Project/Register File/reg_8b/Register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Register File/reg_8b/Register.v|
+!i113 0
+R6
+R0
+n@register

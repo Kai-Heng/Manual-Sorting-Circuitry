@@ -1,0 +1,28 @@
+|validation
+Gt[0] => out.OUTPUTSELECT
+Gt[0] => out.OUTPUTSELECT
+Gt[0] => out.OUTPUTSELECT
+Gt[1] => out.OUTPUTSELECT
+Gt[1] => out.OUTPUTSELECT
+Gt[1] => out.OUTPUTSELECT
+Gt[2] => out.OUTPUTSELECT
+Gt[2] => out.OUTPUTSELECT
+Gt[2] => out.OUTPUTSELECT
+Gt[3] => out.OUTPUTSELECT
+Gt[3] => out.OUTPUTSELECT
+Gt[3] => out.OUTPUTSELECT
+Gt[4] => out.OUTPUTSELECT
+Gt[4] => out.OUTPUTSELECT
+Gt[4] => out.OUTPUTSELECT
+Gt[5] => out.OUTPUTSELECT
+Gt[5] => out.OUTPUTSELECT
+Gt[6] => out.DATAA
+Gt[6] => out.DATAA
+En => out[0]$latch.LATCH_ENABLE
+En => out[1]$latch.LATCH_ENABLE
+En => out[2]$latch.LATCH_ENABLE
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

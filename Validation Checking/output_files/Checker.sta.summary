@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Validate'
+Slack : -6.193
+TNS   : -22.693
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -3.741
+TNS   : -202.766
+
+Type  : Slow 1200mV 85C Model Setup 'COMMIT'
+Slack : -0.937
+TNS   : -37.254
+
+Type  : Slow 1200mV 85C Model Hold 'COMMIT'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 1.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Validate'
+Slack : 2.738
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -85.240
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'COMMIT'
+Slack : -3.000
+TNS   : -85.240
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Validate'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'Validate'
+Slack : -5.761
+TNS   : -20.919
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -3.360
+TNS   : -181.224
+
+Type  : Slow 1200mV 0C Model Setup 'COMMIT'
+Slack : -0.771
+TNS   : -28.521
+
+Type  : Slow 1200mV 0C Model Hold 'COMMIT'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 1.012
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Validate'
+Slack : 2.587
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -85.240
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'COMMIT'
+Slack : -3.000
+TNS   : -85.240
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Validate'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'Validate'
+Slack : -2.338
+TNS   : -8.259
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -1.422
+TNS   : -72.353
+
+Type  : Fast 1200mV 0C Model Setup 'COMMIT'
+Slack : 0.061
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COMMIT'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.521
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Validate'
+Slack : 1.081
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'COMMIT'
+Slack : -3.000
+TNS   : -79.400
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -78.856
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Validate'
+Slack : -3.000
+TNS   : -3.108
+
+------------------------------------------------------------

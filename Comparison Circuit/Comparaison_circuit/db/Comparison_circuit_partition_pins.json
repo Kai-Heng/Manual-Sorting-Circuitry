@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Gt[3]",
+					"strict" : false
+				},
+				{
+					"name" : "En",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

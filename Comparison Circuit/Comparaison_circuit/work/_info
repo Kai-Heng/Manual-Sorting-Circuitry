@@ -1,0 +1,204 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.2/examples
+T_opt
+!s110 1651453116
+V@jK84lA1]B7fnegCBhHmM2
+04 18 4 work Comparison_circuit fast 0
+=1-b07b252ca78e-626f2cbb-1c7-1be8
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vclock_divider_1024
+Z2 !s110 1651453092
+!i10b 1
+!s100 fIjBESnk?eV=j<Yh`]PC00
+IUTkCMKWZi7^m0_jLY2?2;3
+Z3 dU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit
+w1651451769
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v
+!i122 16
+L0 20 211
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1651453091.000000
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vclock_generator
+R2
+!i10b 1
+!s100 ci>Zb^D_mfL^>oNM;nfE30
+IbRRH1e=J>0f6PfllU<WC12
+R3
+w1651451761
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v
+!i122 17
+L0 20 123
+R4
+R5
+r1
+!s85 0
+31
+!s108 1651453092.000000
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v|
+!i113 0
+R6
+R1
+vComparator_8b
+Z7 !s110 1651453093
+!i10b 1
+!s100 >Dj]H[njHzGCkXO`TKe0S1
+IRDC3NfOY5@_0FQ5?noVE>2
+R3
+w1651255695
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v
+!i122 18
+L0 1 11
+R4
+R5
+r1
+!s85 0
+31
+Z8 !s108 1651453093.000000
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v|
+!i113 0
+R6
+R1
+n@comparator_8b
+vComparison_circuit
+R7
+!i10b 1
+!s100 EcHPOENYQ6^@AoEBhen^k3
+I1PS_O006A^^mCJYieJU^N3
+R3
+w1651452023
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v
+!i122 19
+L0 20 136
+R4
+R5
+r1
+!s85 0
+31
+R8
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v|
+!i113 0
+R6
+R1
+n@comparison_circuit
+vMUX21
+Z9 !s110 1651453094
+!i10b 1
+!s100 Rj_H3c@ig]SA2O4ezW<UZ3
+IaQK7l5lRck?>c>MQO`c4L3
+R3
+w1650997067
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v
+!i122 20
+L0 1 7
+R4
+R5
+r1
+!s85 0
+31
+R8
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v|
+!i113 0
+R6
+R1
+n@m@u@x21
+vseven_seg_decoder
+R9
+!i10b 1
+!s100 nQEHk^S[kC]CXS<[MD>hD3
+IAIX=PmH^182?Eg_M8=>a=0
+R3
+w1645496211
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v
+!i122 21
+L0 1 27
+R4
+R5
+r1
+!s85 0
+31
+Z10 !s108 1651453094.000000
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v|
+!i113 0
+R6
+R1
+vUp_counter_3b
+Z11 !s110 1651453095
+!i10b 1
+!s100 TD7]eRho62T6EY_GiTQel1
+I0HZ:k8LdcakF8=SF_B03P2
+R3
+w1651451987
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v
+!i122 22
+L0 20 79
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v|
+!i113 0
+R6
+R1
+n@up_counter_3b
+vvalidation
+R11
+!i10b 1
+!s100 nzKhkU6M70dbOmVUNdPhR1
+I[^]WGA1ga;VW_YO^7EQ[S3
+R3
+w1651452938
+8U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/validation.v
+FU:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/validation.v
+!i122 23
+L0 1 32
+R4
+R5
+r1
+!s85 0
+31
+!s108 1651453095.000000
+!s107 U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/validation.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/validation.v|
+!i113 0
+R6
+R1

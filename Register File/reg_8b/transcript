@@ -1,0 +1,81 @@
+# Compile of reg_8b.v was successful.
+# Compile of MUX21.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.reg_8b
+# vsim -gui work.reg_8b 
+# Start time: 17:21:12 on Apr 27,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(41): Module 'Register' is not defined.
+#  For instance 'b2v_inst' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(49): Module 'Register' is not defined.
+#  For instance 'b2v_inst1' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(57): Module 'Register' is not defined.
+#  For instance 'b2v_inst2' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(65): Module 'Register' is not defined.
+#  For instance 'b2v_inst3' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(73): Module 'Register' is not defined.
+#  For instance 'b2v_inst4' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(81): Module 'Register' is not defined.
+#  For instance 'b2v_inst5' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(89): Module 'Register' is not defined.
+#  For instance 'b2v_inst6' at path 'reg_8b'
+# ** Error: U:/CPR E 281/Final Project/Register File/reg_8b/reg_8b.v(97): Module 'Register' is not defined.
+#  For instance 'b2v_inst7' at path 'reg_8b'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=8, Warnings=0.
+# Error loading design
+# End time: 17:21:18 on Apr 27,2022, Elapsed time: 0:00:06
+# Errors: 8, Warnings: 6
+# Compile of reg_8b.v was successful.
+# Compile of MUX21.v was successful.
+# Compile of Register.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.reg_8b
+# vsim -gui work.reg_8b 
+# Start time: 17:23:01 on Apr 27,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.reg_8b(fast)
+add wave -position insertpoint  \
+sim:/reg_8b/Y \
+sim:/reg_8b/CLK \
+sim:/reg_8b/COMMIT \
+sim:/reg_8b/D \
+sim:/reg_8b/Q
+force Y 0 0, 1 550 -repeat 1100
+force CLK 0 0, 1 500 -repeat 1000
+force COMMIT 0 0, 1 450 -repeat 900
+force D[7] 0 0, 1 400 -repeat 800
+force D[6] 0 0, 1 350 -repeat 700
+force D[5] 0 0, 1 300 -repeat 600
+force D[4] 0 0, 1 250 -repeat 500
+force D[3] 0 0, 1 200 -repeat 400
+force D[2] 0 0, 1 150 -repeat 300
+force D[1] 0 0, 1 100 -repeat 200
+force D[0] 0 0, 1 50 -repeat 100
+run 1000
+force Y 0 0, 1 100 -repeat 1100
+force CLK 0 0, 1 100 -repeat 1000
+force COMMIT 0 0, 1 100 -repeat 900
+force D[7] 0 0, 1 400 -repeat 800
+force D[6] 0 0, 1 350 -repeat 700
+force D[5] 0 0, 1 300 -repeat 600
+force D[4] 0 0, 1 250 -repeat 500
+force D[3] 0 0, 1 200 -repeat 400
+force D[2] 0 0, 1 150 -repeat 300
+force D[1] 0 0, 1 100 -repeat 200
+force D[0] 0 0, 1 50 -repeat 100
+run 1000
+force Y 0 0, 1 100 -repeat 1100
+force CLK 0 0, 1 100 -repeat 1000
+force COMMIT 0 0, 1 100 -repeat 900
+force D[7] 0 0, 1 400 -repeat 800
+force D[6] 0 0, 1 350 -repeat 700
+force D[5] 0 0, 1 300 -repeat 600
+force D[4] 0 0, 1 250 -repeat 500
+force D[3] 0 0, 1 200 -repeat 400
+force D[2] 0 0, 1 150 -repeat 300
+force D[1] 0 0, 1 100 -repeat 200
+force D[0] 0 0, 1 50 -repeat 100
+run 2000
+# End time: 17:50:06 on Apr 27,2022, Elapsed time: 0:27:05
+# Errors: 0, Warnings: 3

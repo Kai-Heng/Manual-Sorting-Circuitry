@@ -1,0 +1,31 @@
+|Circuit
+Clock => Up_Counter:inst.Clock
+Clear => Up_Counter:inst.Reset
+
+
+|Circuit|Up_Counter:inst
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst1.ACLR
+Reset => inst.ACLR
+Clock => inst.CLK
+Clock => inst1.CLK
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Circuit|decoder2to4:inst2
+Y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+W0 => inst4.IN0
+W0 => inst1.IN0
+W0 => inst3.IN0
+EN => inst.IN1
+EN => inst1.IN1
+EN => inst2.IN1
+EN => inst3.IN1
+W1 => inst5.IN0
+W1 => inst2.IN2
+W1 => inst3.IN2
+Y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

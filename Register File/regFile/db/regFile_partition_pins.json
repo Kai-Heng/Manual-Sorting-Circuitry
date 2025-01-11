@@ -1,0 +1,193 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BA",
+					"strict" : false
+				},
+				{
+					"name" : "BB",
+					"strict" : false
+				},
+				{
+					"name" : "BC",
+					"strict" : false
+				},
+				{
+					"name" : "BD",
+					"strict" : false
+				},
+				{
+					"name" : "BE",
+					"strict" : false
+				},
+				{
+					"name" : "BF",
+					"strict" : false
+				},
+				{
+					"name" : "BG",
+					"strict" : false
+				},
+				{
+					"name" : "AA",
+					"strict" : false
+				},
+				{
+					"name" : "AB",
+					"strict" : false
+				},
+				{
+					"name" : "AC",
+					"strict" : false
+				},
+				{
+					"name" : "AD",
+					"strict" : false
+				},
+				{
+					"name" : "AE",
+					"strict" : false
+				},
+				{
+					"name" : "AF",
+					"strict" : false
+				},
+				{
+					"name" : "AG",
+					"strict" : false
+				},
+				{
+					"name" : "DA",
+					"strict" : false
+				},
+				{
+					"name" : "DB",
+					"strict" : false
+				},
+				{
+					"name" : "DC",
+					"strict" : false
+				},
+				{
+					"name" : "DG",
+					"strict" : false
+				},
+				{
+					"name" : "DF",
+					"strict" : false
+				},
+				{
+					"name" : "DE",
+					"strict" : false
+				},
+				{
+					"name" : "DD",
+					"strict" : false
+				},
+				{
+					"name" : "CA",
+					"strict" : false
+				},
+				{
+					"name" : "CB",
+					"strict" : false
+				},
+				{
+					"name" : "CC",
+					"strict" : false
+				},
+				{
+					"name" : "CD",
+					"strict" : false
+				},
+				{
+					"name" : "CE",
+					"strict" : false
+				},
+				{
+					"name" : "CF",
+					"strict" : false
+				},
+				{
+					"name" : "CG",
+					"strict" : false
+				},
+				{
+					"name" : "WA0",
+					"strict" : false
+				},
+				{
+					"name" : "WA1",
+					"strict" : false
+				},
+				{
+					"name" : "WA2",
+					"strict" : false
+				},
+				{
+					"name" : "WB0",
+					"strict" : false
+				},
+				{
+					"name" : "WB1",
+					"strict" : false
+				},
+				{
+					"name" : "WB2",
+					"strict" : false
+				},
+				{
+					"name" : "COMMIT",
+					"strict" : false
+				},
+				{
+					"name" : "D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Mode",
+					"strict" : false
+				},
+				{
+					"name" : "Change",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

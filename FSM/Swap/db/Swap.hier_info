@@ -1,0 +1,508 @@
+|Swap
+BA <= seven_seg_decoder:inst8.A
+W => Control_circuit:inst.w
+Clock => Control_circuit:inst.Clock
+Clock => reg_8b:inst2.CLK
+Clock => reg_8b:inst3.CLK
+Clock => reg_8b:inst4.CLK
+BB <= seven_seg_decoder:inst8.B
+BC <= seven_seg_decoder:inst8.C
+BD <= seven_seg_decoder:inst8.D
+BE <= seven_seg_decoder:inst8.E
+BF <= seven_seg_decoder:inst8.F
+BG <= seven_seg_decoder:inst8.G
+AA <= seven_seg_decoder:inst9.A
+AB <= seven_seg_decoder:inst9.B
+AC <= seven_seg_decoder:inst9.C
+AD <= seven_seg_decoder:inst9.D
+AE <= seven_seg_decoder:inst9.E
+AF <= seven_seg_decoder:inst9.F
+AG <= seven_seg_decoder:inst9.G
+DA <= seven_seg_decoder:inst10.A
+DB <= seven_seg_decoder:inst10.B
+DC <= seven_seg_decoder:inst10.C
+DD <= seven_seg_decoder:inst10.D
+DE <= seven_seg_decoder:inst10.E
+DF <= seven_seg_decoder:inst10.F
+DG <= seven_seg_decoder:inst10.G
+CA <= seven_seg_decoder:inst11.A
+CB <= seven_seg_decoder:inst11.B
+CC <= seven_seg_decoder:inst11.C
+CD <= seven_seg_decoder:inst11.D
+CE <= seven_seg_decoder:inst11.E
+CF <= seven_seg_decoder:inst11.F
+CG <= seven_seg_decoder:inst11.G
+done <= Control_circuit:inst.Done
+
+
+|Swap|seven_seg_decoder:inst8
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2
+Y => Y.IN8
+CLK => CLK.IN8
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+Q[0] <= Register:b2v_inst7.Q
+Q[1] <= Register:b2v_inst6.Q
+Q[2] <= Register:b2v_inst5.Q
+Q[3] <= Register:b2v_inst4.Q
+Q[4] <= Register:b2v_inst3.Q
+Q[5] <= Register:b2v_inst2.Q
+Q[6] <= Register:b2v_inst1.Q
+Q[7] <= Register:b2v_inst.Q
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst1
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst1|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst2
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst2|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst3
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst3|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst4
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst4|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst5
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst5|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst6
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst6|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst7
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst2|Register:b2v_inst7|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|Control_circuit:inst
+R3in <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst2.CLK
+Clock => inst3.CLK
+Clock => inst.CLK
+Clock => inst1.CLK
+w => inst4.IN0
+w => inst7.IN0
+R2out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+R1out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+R2in <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Done <= inst.DB_MAX_OUTPUT_PORT_TYPE
+R3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+R1in <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3
+Y => Y.IN8
+CLK => CLK.IN8
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+Q[0] <= Register:b2v_inst7.Q
+Q[1] <= Register:b2v_inst6.Q
+Q[2] <= Register:b2v_inst5.Q
+Q[3] <= Register:b2v_inst4.Q
+Q[4] <= Register:b2v_inst3.Q
+Q[5] <= Register:b2v_inst2.Q
+Q[6] <= Register:b2v_inst1.Q
+Q[7] <= Register:b2v_inst.Q
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst1
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst1|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst2
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst2|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst3
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst3|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst4
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst4|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst5
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst5|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst6
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst6|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst7
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst3|Register:b2v_inst7|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4
+Y => Y.IN8
+CLK => CLK.IN8
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+Q[0] <= Register:b2v_inst7.Q
+Q[1] <= Register:b2v_inst6.Q
+Q[2] <= Register:b2v_inst5.Q
+Q[3] <= Register:b2v_inst4.Q
+Q[4] <= Register:b2v_inst3.Q
+Q[5] <= Register:b2v_inst2.Q
+Q[6] <= Register:b2v_inst1.Q
+Q[7] <= Register:b2v_inst.Q
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst1
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst1|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst2
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst2|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst3
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst3|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst4
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst4|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst5
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst5|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst6
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst6|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst7
+Y => Y.IN1
+DATA => DATA.IN1
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|reg_8b:inst4|Register:b2v_inst7|MUX21:b2v_inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|seven_seg_decoder:inst9
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|seven_seg_decoder:inst10
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Swap|seven_seg_decoder:inst11
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+

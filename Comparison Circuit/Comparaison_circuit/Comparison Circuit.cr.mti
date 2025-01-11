@@ -1,0 +1,50 @@
+{U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_divider_1024.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module clock_divider_1024
+
+Top level modules:
+	clock_divider_1024
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/seven_seg_decoder.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module seven_seg_decoder
+
+Top level modules:
+	seven_seg_decoder
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Up_counter_3b.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Up_counter_3b
+
+Top level modules:
+	Up_counter_3b
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparator_8b.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Comparator_8b
+
+Top level modules:
+	Comparator_8b
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/Comparison_circuit.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Comparison_circuit
+
+Top level modules:
+	Comparison_circuit
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/MUX21.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MUX21
+
+Top level modules:
+	MUX21
+
+} {} {}} {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v} {1 {vlog -work work -vopt -stats=none {U:/CPR E 281/Final Project/Comparison Circuit/Comparaison_circuit/clock_generator.v}
+QuestaSim-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module clock_generator
+
+Top level modules:
+	clock_generator
+
+} {} {}}

@@ -1,0 +1,14 @@
+|Register
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst2.CLK
+DATA => MUX21:inst1.D1
+Y => MUX21:inst1.S
+
+
+|Register|MUX21:inst1
+D0 => Y.DATAA
+D1 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
